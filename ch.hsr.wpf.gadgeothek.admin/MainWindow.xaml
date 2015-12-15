@@ -1,0 +1,44 @@
+﻿<Window x:Class="ch.hsr.wpf.gadgeothek.admin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ch.hsr.wpf.gadgeothek.admin"
+        mc:Ignorable="d"
+        Title="Gadgeothek Admin" Height="350" Width="525">
+    <StackPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Edit">
+                <MenuItem Header="Copy" Command="Copy"/>
+                <MenuItem Header="Cut" Command="Cut"/>
+                <MenuItem Header="Paste" Command="Paste"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel Name="StackPanelMain" Margin="15">
+            <TabControl Name="TabControl">
+                <TabItem Header="Customers">
+                    <DataGrid Name="DataGridCustomers" IsReadOnly="True"/>
+                </TabItem>
+                <TabItem Header="Gadgets">
+                    <StackPanel Name="StackPanelGadgets">
+                        <StackPanel Orientation="Horizontal" Name="FormGadgets">
+                            <Button Click="GadgetsAdd_Click" Height="25">Add</Button>
+                            <Button Click="GadgetsDelete_Click" Height="25">Delete</Button>
+                        </StackPanel>
+                        <DataGrid Name="DataGridGadgets" IsReadOnly="True"/>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Loans">
+                    <StackPanel Name="StackPanelLoans">
+                        <DataGrid Name="DataGridLoans" IsReadOnly="True"/>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Reservations">
+                    <StackPanel Name="StackPanelReservations">
+                        <DataGrid Name="DataGridReservations" IsReadOnly="True"/>
+                    </StackPanel>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+    </StackPanel>
+</Window>

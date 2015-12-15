@@ -1,0 +1,22 @@
+﻿<Window x:Class="ch.hsr.wpf.gadgeothek.admin.GadgetDelete"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ch.hsr.wpf.gadgeothek.admin"
+        mc:Ignorable="d"
+        Title="Gadget delete" Height="300" Width="300">
+    <StackPanel Orientation="Vertical" Margin="10">
+        <Label x:Name="labelName" Content="Name:" Margin="0,0,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Name" Height="25" Margin="0,0,0,10" VerticalAlignment="Top"/>
+        <Label x:Name="labelManufacturer" Content="Manufacturer:" Margin="0,0,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Manufacturer" Height="25" Margin="0,0,0,10" VerticalAlignment="Top"/>
+        <Label x:Name="labelPrice" Content="Price:" Margin="0,0,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Price" Height="25" Margin="0,0,0,10" VerticalAlignment="Top"/>
+        <Label x:Name="Info" Height="25" Margin="0,0,0,10" VerticalAlignment="Top">Are you sure you want to delete this gadget?</Label>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0">
+            <Button Height="25" Content="Yes" Click="GadgetDeleteYes_Click"/>
+            <Button Height="25" Content="No" Click="GadgetDeleteNo_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
